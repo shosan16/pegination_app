@@ -29,4 +29,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ***** 以下を追加 *****
 gem 'faker', require: false
+gem 'pry-byebug'
 # ***** 以上を追加 *****

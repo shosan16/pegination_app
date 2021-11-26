@@ -1,17 +1,12 @@
 <h1>投稿一覧</h1>
-
 <%= form_with model: @post, local: true do |form| %>
-  <div>
-    <%= form.label :body, "投稿" %>
+  <p>
     <%= form.text_field :body %>
-  </div>
-  <div>
     <%= form.submit "送信" %>
-  </div>
+  </p>
 <% end %>
 
-<p>
-  <% @posts.each do |post| %>
-    <%= post.body %>
-  <%= end %>
-</p>
+
+<% @posts.each do |post| %>
+  <p><%= post.body %></p>
+<% end %>
