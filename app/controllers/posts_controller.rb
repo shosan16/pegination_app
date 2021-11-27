@@ -1,7 +1,10 @@
 class PostsController < ApplicationController
+  #ページの表示数
+  PER_PAGE = 10
+
   def index
     @post = Post.new
-    @posts = Post.order(id: :asc)
+    @posts = Post.page(params[:page]).per(PER_PAGE).order(id: :DESC)
   end
 
   def create

@@ -10,3 +10,5 @@
 <% @posts.each do |post| %>
   <p><%= post.body %></p>
 <% end %>
+
+<%= paginate @posts %>
